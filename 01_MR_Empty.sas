@@ -3,8 +3,7 @@
    by Rick Wicklin
    August 2025
 
-   This program shows how the skewness and kurtosis changes as you vary 
-   the alpha (shape) parameter in s Gamm(alpha) distribution 
+   This program shows a basic moment-ratio diagram with markers for certain symmetric distributions.
 */
 
 %include "MR_Macros.sas";

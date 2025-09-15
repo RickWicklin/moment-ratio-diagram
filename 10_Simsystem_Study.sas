@@ -5,10 +5,15 @@
 
    This program demsonstrates how to use PROC SIMSYSTEM to design a simulation study.
    The research question is:
-   What is the empirical coverage probability for the 
-        formula that gives the CI of the mean
+   What is the empirical coverage probability for the "t interval"
         [xbar - t*s/sqrt(n), xbar + t*s/sqrt(n)]
-        when the distribution for the data has skewness and excess kurtosis.
+    This is a 95% CI when the data are normal.
+    This an approximate 95% CI when the data are "approximately normal." 
+    Goal: Find the empiraical coverage of this interval for random samples from distributions 
+    that have skewness and excess kurtosis.
+
+    This program simulates B samples of size N from a Johnson distribution 
+    that has the given (skew,kurt) value.
 */
 
 cas;
@@ -16,6 +21,7 @@ cas;
 /* Visualize the grid of (skew, kurt) values and a few simulated data samples */
 %let N = 50;           /* sample size */   
 %let NSamples = 20000; /* number of simulated samples for each (skew,kurt) value */
+
 /* NOTE: If the grid contains G points, then the Moments data set has
    G*NSamples*N observations, which can be big! */
 proc simsystem system=Johnson  /* use the Johnson system to simulate */
@@ -79,7 +85,7 @@ proc sgplot data=SimSummary;
     yaxis grid reverse;
 run;
 
-/* model the covereage probability by using a quadratic response surface */
+/* Optional: model the covereage probability by using a quadratic response surface */
 proc rsreg data=SimSummary plots=Contour;
     model CoverageProb = Kurtosis Skewness;
     ods select Contour;
