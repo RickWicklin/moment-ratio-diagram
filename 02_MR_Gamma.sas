@@ -45,7 +45,9 @@ run;
 ods graphics / pop;
 
 
-/* The skewness and (excess) kurtosis for a GAMMA(alpha) distribution */
+/* The skewness and (excess) kurtosis for a GAMMA(alpha) distribution 
+   (Standardize so that the variance is 1.)
+*/
 %let xL = -2.4; %let xR =  2.4;    /* range of skewness is [xL, xR] */
 %let yB = -2.0; %let yT = 10.0;    /* range of kurtosis is [yB, yT] */
 

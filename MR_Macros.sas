@@ -6,14 +6,14 @@
 
 /* This file creates annotation data sets for visualizing the moment-ratio diagram.
    The coordinates are the (x1,y1) variables.
-   The data sets are:
-   MR_Boundary : The boundary between the valid and invalid region
-   MR_Points : Distributions that are points (Normal, Uniform, Exponential, T5, T6, T7. T8,...
-   MR_Beta_Region: The (skew, kurt) region that corresponds to the Beta(a,b) distribution
-   MR_LN_Curve: The (skew, kurt) curve that corresponds to the Lognormal(sigma) distribution
-   MR_Gamma_Curve: The (skew, kurt) curve that corresponds to the Gamma(alpha) distribution
+   The data sets are as follows:
+   MR_Boundary :     The boundary between the valid and invalid region
+   MR_Points :       Distributions that are points (Normal, Uniform, Exponential, T5, T6, T7. T8,...
+   MR_Beta_Region:   The (skew, kurt) region that corresponds to the Beta(a,b) distribution
+   MR_LN_Curve:      The (skew, kurt) curve that corresponds to the Lognormal(sigma) distribution
+   MR_Gamma_Curve:   The (skew, kurt) curve that corresponds to the Gamma(alpha) distribution
    MR_Weibull_Curve: The (skew, kurt) curve that corresponds to the Weibull(k) distribution
-   MR_IGauss_Curve: The (skew, kurt) curve that corresponds to the IGamma(lambda) distribution
+   MR_IGauss_Curve:  The (skew, kurt) curve that corresponds to the IGamma(lambda) distribution
 */
 
 /*********** BEGIN MACRO SECTION ***********/

@@ -3,7 +3,7 @@
    by Rick Wicklin
    August 2025
 
-   This program shows how to visualize common distributions on the M-R diagram.
+   This program shows how to visualize relationships between common distributions on the M-R diagram.
 */
 
 %include "MR_Macros.sas";
